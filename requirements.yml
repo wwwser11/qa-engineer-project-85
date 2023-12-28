@@ -1,0 +1,32 @@
+---
+functional:
+  - it must have main page
+  - main page must contain a Header
+  - Header must contain logo, brand name, user's menu
+  - main page must contain "Create a game" button
+  - main page must contain side bar, which contain "lobby", "Tournaments", "Completed Games" with the ability to switch between them
+  - "Lobby" side bar must contain 4 collums("level", "State", "Players", "Actions") and 4 rows
+  - "Tournaments"
+  - "Completed Games"
+  - main page must contain Chat
+  - it must be possible to switch between "General" and "Notification" in the Chat
+  - main page must contain "LEADERBOARD"
+  - "LEADERBOARD"
+  - main page must contain a footer.
+  - "footer"
+  - it must
+  - it must
+  - it must
+non-functional:
+  - it must be
+  - it must be available 24/7
+  - it must be capable of displaying content in multiple languages
+  - it must be compatible with the all main web browsers(Google Chrome, Safari, Microsoft Edge, Mozilla Firefox, Opera), all versions not elder 36 months.
+  - it must be able to handle heavy traffic (up to 1.000 users at ones)
+  - it must be convenient on moble devises
+  - it must be secure and protect user's data
+  - it must be designed with ease of use in mind and
+  optimized for speed
+  -
+implict:
+  -
