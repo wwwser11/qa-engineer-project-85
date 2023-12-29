@@ -1,31 +1,53 @@
 ---
 functional:
-  - it must have main page
-  - main page must contain a Header
-  - Header must contain logo, brand name, user's menu
-  - main page must contain "Create a game" button
-  - main page must contain side bar, which contain "lobby", "Tournaments", "Completed Games" with the ability to switch between them
-  - "Lobby" side bar must contain 4 collums("level", "State", "Players", "Actions") and 4 rows
-  - "Tournaments"
-  - "Completed Games"
-  - main page must contain Chat
-  - it must be possible to switch between "General" and "Notification" in the Chat
-  - main page must contain "LEADERBOARD"
-  - "LEADERBOARD"
-  - main page must contain a footer.
-  - "footer"
-  - it must
-  - it must
-  - it must
+  - 1. website must have main page
+  - 1.1 main page must contain a Header
+  - 1.1.1 Header must contain logo, brand name, user's menu
+  - 1.2 main page must contain "Create a game" button
+  - 1.3 main page must contain side bar, which contain "lobby", "Tournaments", "Completed Games" with the ability to switch between them
+  - 1.4 main page must contain Chat side bar
+  - 1.4.1 it must be possible to switch between "General" and "Notification" in the Chat
+  - 1.5 main page must contain "LEADERBOARD"
+  - 1.6 main page must contain a footer.
+  - 2. website must have separate page for unsigned users
+  - 2.1 website must have "sing in", "sign up" and "try a simple battle" buttoms on the unsigned users page
+  - 3. website must have Sign up page
+  - 3.1 user must be able to sign up with Github or Discord or via email
+  - 3.2 it must be imposibble to register more than one profile with the same name or email
+  - 3.3 email must be like "%@%.%"
+  - 3.4 name must be longer than 6 charters
+  - 3.5 password must be longer than 6 charters , less than 16 characters and must have one special character
+  - 4. website must have Sign in page
+  - 4.1 user must be able to sign in with Github or Discord or via email
+  - 4.2 during Sign In attempt with incorrect password web page must show "INVALID_PASSWORD" error into log in side bar
+  - 4.3 during Sign In attempt with incorrect email web page must show "EMAIL_NOT_FOUND" error into log in side bar
+  - 5. user must be able to change user name
+  - 6. user must be able to connect Github after registration
+  - 7. user must be able to connect Discord after registration
+  - 8. user must be able to switch his "weapon"(programming language)
+  - 9. user must be able to Sign out
+  - 10. user must be able to delete profile
+  - 11. user must be able to join avalible game
+  - 12. user must be able to create new game
+  - 12.1 create new game menu must give users opportunity to choose level, game type, time control, kind of task
+  - 12.1 during the creating new game user can choose level
+  - 12.1.1 level range 1-4
+  - 12.2 during the creating new game user can choose game type
+  - 12.2.1 user must be able to play with others users
+  - 12.2.2 user must be able to play with a friend
+  - 12.2.3 user must be able to play with a bot
+  - 12.3 during the creating new game user can choose time control
+  - 12.3.1 time range 3-60 minutes
+  - 12.4 during the creating new game user can choose kind of task
+  - website must
 non-functional:
-  - it must be
-  - it must be available 24/7
-  - it must be capable of displaying content in multiple languages
-  - it must be compatible with the all main web browsers(Google Chrome, Safari, Microsoft Edge, Mozilla Firefox, Opera), all versions not elder 36 months.
-  - it must be able to handle heavy traffic (up to 1.000 users at ones)
-  - it must be convenient on moble devises
-  - it must be secure and protect user's data
-  - it must be designed with ease of use in mind and
+  - website must be
+  - website must be capable of displaying content in multiple languages
+  - website must be compatible with the all main web browsers(Google Chrome, Safari, Microsoft Edge, Mozilla Firefox, Opera), all versions not elder 36 months.
+  - website must be able to handle heavy traffic (up to 1.000 users at ones)
+  - website must be convenient on moble devises
+  - website must be secure and protect user's data
+  - website must be designed with ease of use in mind and
   optimized for speed
   -
 implict:
