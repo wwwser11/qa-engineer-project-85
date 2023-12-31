@@ -1,32 +1,102 @@
 ---
-- summary: |
-    Краткое описание тест-кейса. Пример: Проверка входа пользователя с существующими логином и паролем
-  requirement: |
-    Тестируемое требование. Например: При верном вводе логине и пароля пользователь должен войти в систему
-  prerequisites: |
-    Это условия, которые необходимы для проведения тест-кейса. Они должны быть выполнены еще до запуска тест-кейса.
-    Например: открыта страница логина
-  test-data: |
-    Тестовые данные
-    Логин = ilona Пароль = password
-  steps:
-    - Вводим логин
-    - Вводим пароль
-    - Нажимаем кнопку «Войти»
-  expected-result: |
-    Пользователь должен попасть на главную страницу
 
 - summary: |
-    Проверка входа пользователя с несуществующими логином и паролем
+    3.1 sign up with Github
   requirement: |
-    При неправильном логине или пароле пользователь должен получить сообщение об ошибке
-  prerequisites:
-    Открыта страница логина
+    user must be able to sign up with Github
+  prerequisites: |
+    sign up page is open
+    github account is exist and user must be signed in
   test-data: |
-    Логин = Логин = hexlet Пароль = badpass
+    sign up page = https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+    github = login = ***** password = **********
   steps:
-    - Вводим логин
-    - Вводим пароль
-    - Нажимаем кнопку «Войти»
+    - push the "Sign in with Github" buttom
+    - web site must redirect user to Github log in page
+    - enter github login and password
+    - press "sign in" buttom
   expected-result: |
-    Пользователь должен получить сообщение об ошибке
+    browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
+
+- summary: |
+    3.2 sign up with Discord
+  requirement: |
+    user must be able to sign up with Discord
+  prerequisites: |
+    sign up page is open
+    Discord account is exist and user must be signed in
+  test-data: |
+    sign up page = https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+    Discord = login = ***** password = **********
+  steps:
+    - push the "Sign in with Discord" buttom
+    - web site must redirect user to Github log in page
+    - enter Discord login and password
+    - press "Вход" buttom
+  expected-result: |
+    browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
+
+- summary: |
+    3.3 sign up via email
+  requirement: |
+    3.3 user must be able to sign up via email
+  prerequisites:
+    sign up page is open
+  test-data: |
+    name = NameOdinDvaTri
+    email = wwwser011@gmail.com
+    password = Podarock8912!
+  steps:
+    - enter name
+    - enter email
+    - enter password
+    - enter password confimation
+    - press "submit" buttom
+  expected-result: |
+    browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
+
+
+- summary: |
+    3.4 atempt of registering more than one profile with the same name
+  requirement: |
+    it must be imposibble to register more than one profile with the same name
+  prerequisites: |
+    sign up page is open
+    user's name is already exist at codebattle
+  test-data: |
+    sign up page = https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+    name = wwwser11
+    email = wwwser11@yandex.ru
+    password = Podarock8912!
+  steps:
+    - enter name
+    - enter email
+    - enter password
+    - enter password confimation
+    - press "submit" buttom
+  expected-result: |
+    account won't be registered
+    error = "Nickname is already taken"
+
+
+- summary: |
+    3.4 atempt of registering more than one profile with the same email
+  requirement: |
+    it must be imposibble to register more than one profile with the same email
+  prerequisites: |
+    sign up page is open
+    user's email is already exist at codebattle
+  test-data: |
+    sign up page = https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+    name = wwwser111
+    email = wwwser11@yandex.ru
+    password = Podarock8912!
+  steps:
+    - enter name
+    - enter email
+    - enter password
+    - enter password confimation
+    - press "submit" buttom
+  expected-result: |
+    account won't be registered
+    error = "EMAIL_EXISTS"
