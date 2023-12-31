@@ -23,10 +23,11 @@ functional:
   - 3.1 user must be able to sign up with Github
   - 3.2 user must be able to sign up with Discord
   - 3.3 user must be able to sign up via email
-  - 3.4 it must be imposibble to register more than one profile with the same name or email
-  - 3.5 email must be like "%@%.%"
-  - 3.6 name must be longer than 6 charters
-  - 3.7 password must be longer than 6 charters , less than 16 characters and must have one special character
+  - 3.4 it must be imposibble to register more than one profile with the same name
+  - 3.5 it must be imposibble to register more than one profile with the same email
+  - 3.6 email must be like "%@%.%"
+  - 3.7 name must be longer than 6 charters
+  - 3.8 password must be longer than 6 charters , less than 16 characters and must have one special character
   - 4. website must have Sign in page
   - 4.1 user must be able to sign in with Github
   - 4.2 user must be able to sign in with Discord
