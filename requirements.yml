@@ -37,9 +37,50 @@ functional:
   - 12.2.2 user must be able to play with a friend
   - 12.2.3 user must be able to play with a bot
   - 12.3 during the creating new game user can choose time control
-  - 12.3.1 time range 3-60 minutes
+  - 12.3.1 time control range 3-60 minutes
   - 12.4 during the creating new game user can choose kind of task
-  - website must
+  - 13. website must have a game page
+  - 13.1 game page must have "Task" window
+  - 13.2 game page must have "Output" window
+  - 13.3 game page must have "Chat" window
+  - 13.3.1 "Chat" window must have "General"
+  - 13.3.2 "Chat" window must have "Notifications"
+  - 13.3.3 It must be possible to swith beetween "General" and "Notifications"
+  - 13.3.4  user must be able to sent messages in the chat
+  - 13.4 game page must have game timer
+  - 13.5 game page must have user's code editor
+  - 13.5.1 user must be able to choose between dark and light color mode
+  - 13.5.2 user must be able to use "Vim" to write a code
+  - 13.5.3 user must be able to run user's code
+  - 13.5.4 user must be able to reset user's editor
+  - 13.5.5 user must be able to give up
+  - 13.5.6 every text row in the editor must have a sequence number
+  - 13.5.7 user must be able to switch programing lenguage
+  - 13.5.7.1 Clojure 1.11.2.1 must be as avalible lenguage
+  - 13.5.7.2 C++ 20 must be as avalible lenguage
+  - 13.5.7.3 C# 6.0.100 must be as avalible lenguage
+  - 13.5.7.4 Dart 2.17.6 must be as avalible lenguage
+  - 13.5.7.5 Golang 1.19.0 must be as avalible lenguage
+  - 13.5.7.6 Java 20 must be as avalible lenguage
+  - 13.5.7.7 Node.JS 16.17.0 must be as avalible lenguage
+  - 13.5.7.8 Kotlin 1.9.10 must be as avalible lenguage
+  - 13.5.7.9 Php 8.1.8 must be as avalible lenguage
+  - 13.5.7.10 Rupy 3.2.2 must be as avalible lenguage
+  - 13.5.7.11 Typescript 4.7.4 must be as avalible lenguage
+  - 13.6 game page must show second player's code redactor
+  - 13.6.1 both players must be able to see code of each other
+  - 13.8 user must be able to retern to the home page from game page
+  - 13.9 game page must have game music accompaniment
+  - 13.10 game page must have online user counter
+  - 13.11 if users's solution is incorrect; issues must be showed in output without game stop
+  - 13.12 if user won; winner banner must be showed
+  - 13.13 if an opponent won; loser banner must be showed
+  - 13.14 game must be stopped when someone win or give up or time is gone
+  - 13.15 user must be able to switch to another page without losing the game
+  - 13.16 user must be able to come back to the exisited game from another page
+  - 13.17 user must be able to rematch a game with the same opponent and with the same conditions(level, time, etc)
+  - 13.18 user must be able to cancel a game "Game type" = "with other users" before an opponent founded.
+  - 13.19 user must be able to send feedback
 non-functional:
   - website must be
   - website must be capable of displaying content in multiple languages
