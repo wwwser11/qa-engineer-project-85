@@ -1,0 +1,76 @@
+---
+- summary: |
+    3.1 sign up with Github
+  status: pass
+
+- summary: |
+    3.2 sign up with Discord
+  status: pass
+
+- summary: |
+    3.3 sign up via email
+  status: pass
+
+- summary: |
+    3.4 registering more than one profile with the same name
+  status: pass
+
+- summary: |
+    3.5 registering more than one profile with the same email
+  status: pass
+
+- summary: |
+    3.6 registering with wrong email
+  status: pass
+
+- summary: |
+    3.7 registering with wrong name(shorter than 3 charters)
+  status: pass
+
+- summary: |
+    3.7 registering with wrong name(longer than 16 charters)
+  status: pass
+
+- summary: |
+    3.8 registering with wrong password(shorter than 6 charters)
+  status: pass
+
+- summary: |
+    3.8 registering with wrong password(longer than 16 charters)
+  status: pass
+
+- summary: |
+    3.8 registering with wrong password(with one special character)
+  status: fail
+
+- summary: |
+    4.1 sign in with Github
+  status: pass
+
+- summary: |
+    4.2 sign in with Discord
+  status: pass
+
+- summary: |
+    4.3 sign in via email
+  status: pass
+
+- summary: |
+    4.4 sign in with incorrect password
+  status: pass
+
+- summary: |
+    4.5 sign In with incorrect email
+  status: pass
+
+- summary: |
+    5. change user name
+  status: pass
+
+- summary: |
+    6. connect Github after registration
+  status: pass
+
+- summary: |
+    7. connect Discord after registration
+  status: pass
