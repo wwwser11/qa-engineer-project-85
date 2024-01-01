@@ -245,11 +245,11 @@
     browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
 
 - summary: |
-    4.2 sign up with Discord
+    4.2 sign in with Discord
   requirement: |
-    user must be able to sign up with Discord
+    user must be able to sign in with Discord
   prerequisites: |
-    sign up page is open
+    sign in page is open
     Discord account is exist and user must be signed in
   test-data: |
     sign in page = https://codebattle.hexlet.io/session/new?locale=en&next=%2F
