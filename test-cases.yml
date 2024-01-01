@@ -14,7 +14,7 @@
     - push the "Sign in with Github" buttom
     - web site must redirect user to Github log in page
     - enter github login and password
-    - press "sign in" buttom
+    - press "sign in" button
   expected-result: |
     browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
 
@@ -32,7 +32,7 @@
     - push the "Sign in with Discord" buttom
     - web site must redirect user to Github log in page
     - enter Discord login and password
-    - press "Вход" buttom
+    - press "Вход" button
   expected-result: |
     browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
 
@@ -52,7 +52,7 @@
     - enter email
     - enter password
     - enter password confimation
-    - press "submit" buttom
+    - press "submit" button
   expected-result: |
     browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
 
@@ -73,7 +73,7 @@
     - enter email
     - enter password
     - enter password confimation
-    - press "submit" buttom
+    - press "submit" button
   expected-result: |
     account won't be registered
     error = "Nickname is already taken"
@@ -95,7 +95,7 @@
     - enter email
     - enter password
     - enter password confimation
-    - press "submit" buttom
+    - press "submit" button
   expected-result: |
     account won't be registered
     error = "EMAIL_EXISTS"
@@ -116,7 +116,7 @@
     - enter email
     - enter password
     - enter password confimation
-    - press "submit" buttom
+    - press "submit" button
   expected-result: |
     account won't be registered
     error = "Invalid email"
@@ -137,7 +137,7 @@
     - enter email
     - enter password
     - enter password confimation
-    - press "submit" buttom
+    - press "submit" button
   expected-result: |
     account won't be registered
     error = "Should be from 3 to 16 characters"
@@ -158,7 +158,7 @@
     - enter email
     - enter password
     - enter password confimation
-    - press "submit" buttom
+    - press "submit" button
   expected-result: |
     account won't be registered
     error = "Should be from 3 to 16 characters"
@@ -179,7 +179,7 @@
     - enter email
     - enter password
     - enter password confimation
-    - press "submit" buttom
+    - press "submit" button
   expected-result: |
     account won't be registered
     error = "Should be from 6 to 16 characters"
@@ -200,7 +200,7 @@
     - enter email
     - enter password
     - enter password confimation
-    - press "submit" buttom
+    - press "submit" button
   expected-result: |
     account won't be registered
     error = "Should be from 6 to 16 characters"
@@ -221,10 +221,10 @@
     - enter email
     - enter password
     - enter password confimation
-    - press "submit" buttom
+    - press "submit" button
   expected-result: |
     account won't be registered
-    error = "Should have one special character"
+    error = "Should contain at least one special character"
 
 - summary: |
     4.1 sign in with Github
@@ -240,7 +240,7 @@
     - push the "Sign in with Github" buttom
     - web site must redirect user to Github log in page
     - enter github login and password
-    - press "sign in" buttom
+    - press "sign in" button
   expected-result: |
     browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
 
@@ -258,7 +258,7 @@
     - push the "Sign in with Discord" buttom
     - web site must redirect user to Github log in page
     - enter Discord login and password
-    - press "Вход" buttom
+    - press "Вход" button
   expected-result: |
     browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
 
@@ -275,7 +275,7 @@
   steps:
     - enter email
     - enter password
-    - press "submit" buttom
+    - press "submit" button
   expected-result: |
     browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
 
@@ -292,7 +292,7 @@
   steps:
     - enter email
     - enter password
-    - press "submit" buttom
+    - press "submit" button
   expected-result: |
     web page must show "INVALID_PASSWORD" error
     user won't log in
@@ -310,7 +310,7 @@
   steps:
     - enter email
     - enter password
-    - press "submit" buttom
+    - press "submit" button
   expected-result: |
     web page must show "EMAIL_NOT_FOUND" error
     user won't log in
@@ -331,7 +331,7 @@
     new user name = VALERIQ
   steps:
     - change name to new user name
-    - press "save" buttom
+    - press "save" button
   expected-result: |
     web page must show "Your settings has been changed"
 
@@ -351,10 +351,10 @@
     password = Podarock8912!
     github = login = ***** password = **********
   steps:
-    - press "link Github" buttom
+    - press "link Github" button
     - web site must redirect user to Github log in page
     - enter github login and password
-    - press "sign in" buttom
+    - press "sign in" button
   expected-result: |
     web page must show "Your settings has been changed"
 
@@ -375,9 +375,9 @@
     password = Podarock8912!
     Discord = login = ***** password = **********
   steps:
-    - press "link Discord" buttom
+    - press "link Discord" button
     - web site must redirect user to Discord log in page
     - enter Discord login and password
-    - press "sign in" buttom
+    - press "sign in" button
   expected-result: |
     web page must show "Your settings has been changed"
