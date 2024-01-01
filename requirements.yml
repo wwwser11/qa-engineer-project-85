@@ -26,7 +26,7 @@ functional:
   - 3.4 it must be imposibble to register more than one profile with the same name
   - 3.5 it must be imposibble to register more than one profile with the same email
   - 3.6 email must be like "%@%.%"
-  - 3.7 name must be longer than 6 charters
+  - 3.7 name must be longer than 3 charters
   - 3.8 password must be longer than 6 charters , less than 16 characters and must have one special character
   - 4. website must have Sign in page
   - 4.1 user must be able to sign in with Github
