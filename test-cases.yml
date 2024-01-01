@@ -43,6 +43,7 @@
   prerequisites:
     sign up page is open
   test-data: |
+    sign up page = https://codebattle.hexlet.io/users/new?locale=en&next=%2F
     name = NameOdinDvaTri
     email = wwwser011@gmail.com
     password = Podarock8912!
@@ -54,7 +55,6 @@
     - press "submit" buttom
   expected-result: |
     browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
-
 
 - summary: |
     3.4 atempt of registering more than one profile with the same name
@@ -78,9 +78,8 @@
     account won't be registered
     error = "Nickname is already taken"
 
-
 - summary: |
-    3.4 atempt of registering more than one profile with the same email
+    3.5 atempt of registering more than one profile with the same email
   requirement: |
     it must be imposibble to register more than one profile with the same email
   prerequisites: |
@@ -100,3 +99,285 @@
   expected-result: |
     account won't be registered
     error = "EMAIL_EXISTS"
+
+- summary: |
+    3.6 atempt of registering with wrong email
+  requirement: |
+    email must be like "%@%.%"
+  prerequisites: |
+    sign up page is open
+  test-data: |
+    sign up page = https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+    name = wwwser111
+    email = wwwser11yandex.ru
+    password = Podarock8912!
+  steps:
+    - enter name
+    - enter email
+    - enter password
+    - enter password confimation
+    - press "submit" buttom
+  expected-result: |
+    account won't be registered
+    error = "Invalid email"
+
+- summary: |
+    3.7 atempt of registering with wrong name
+  requirement: |
+    name must be longer than 3 charters
+  prerequisites: |
+    sign up page is open
+  test-data: |
+    sign up page = https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+    name = fo
+    email = wwwser101yandex.ru
+    password = Podarock8912!
+  steps:
+    - enter name
+    - enter email
+    - enter password
+    - enter password confimation
+    - press "submit" buttom
+  expected-result: |
+    account won't be registered
+    error = "Should be from 3 to 16 characters"
+
+- summary: |
+    3.7 atempt of registering with wrong name
+  requirement: |
+    name must be shorter than 16 charters
+  prerequisites: |
+    sign up page is open
+  test-data: |
+    sign up page = https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+    name = fo123456789o123456789
+    email = wwwser1001yandex.ru
+    password = Podarock8912!
+  steps:
+    - enter name
+    - enter email
+    - enter password
+    - enter password confimation
+    - press "submit" buttom
+  expected-result: |
+    account won't be registered
+    error = "Should be from 3 to 16 characters"
+
+- summary: |
+    atempt of registering with wrong password
+  requirement: |
+    3.8 password must be longer than 6 charters ,
+  prerequisites: |
+    sign up page is open
+  test-data: |
+    sign up page = https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+    name = foo66
+    email = wwwser1001yandex.ru
+    password = D92!
+  steps:
+    - enter name
+    - enter email
+    - enter password
+    - enter password confimation
+    - press "submit" buttom
+  expected-result: |
+    account won't be registered
+    error = "Should be from 6 to 16 characters"
+
+- summary: |
+    atempt of registering with wrong password
+  requirement: |
+    3.8 password must be shorter than 16 charters ,
+  prerequisites: |
+    sign up page is open
+  test-data: |
+    sign up page = https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+    name = foo66
+    email = wwwser1001yandex.ru
+    password = Dom92!1234567890
+  steps:
+    - enter name
+    - enter email
+    - enter password
+    - enter password confimation
+    - press "submit" buttom
+  expected-result: |
+    account won't be registered
+    error = "Should be from 6 to 16 characters"
+
+- summary: |
+    atempt of registering with wrong password
+  requirement: |
+    3.8 password must have one special character
+  prerequisites: |
+    sign up page is open
+  test-data: |
+    sign up page = https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+    name = foo66
+    email = wwwser1001yandex.ru
+    password = Dom9277
+  steps:
+    - enter name
+    - enter email
+    - enter password
+    - enter password confimation
+    - press "submit" buttom
+  expected-result: |
+    account won't be registered
+    error = "Should have one special character"
+
+- summary: |
+    4.1 sign in with Github
+  requirement: |
+    user must be able to sign in with Github
+  prerequisites: |
+    sign in page is open
+    github account is exist and user must be signed in
+  test-data: |
+    sign in page = https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    github = login = ***** password = **********
+  steps:
+    - push the "Sign in with Github" buttom
+    - web site must redirect user to Github log in page
+    - enter github login and password
+    - press "sign in" buttom
+  expected-result: |
+    browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
+
+- summary: |
+    4.2 sign up with Discord
+  requirement: |
+    user must be able to sign up with Discord
+  prerequisites: |
+    sign up page is open
+    Discord account is exist and user must be signed in
+  test-data: |
+    sign in page = https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    Discord = login = ***** password = **********
+  steps:
+    - push the "Sign in with Discord" buttom
+    - web site must redirect user to Github log in page
+    - enter Discord login and password
+    - press "Вход" buttom
+  expected-result: |
+    browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
+
+- summary: |
+    4.3 sign in via email
+  requirement: |
+    user must be able to sign in via email
+  prerequisites:
+    sign in page is open
+  test-data: |
+    sign in page = https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    email = wwwser011@gmail.com
+    password = Podarock8912!
+  steps:
+    - enter email
+    - enter password
+    - press "submit" buttom
+  expected-result: |
+    browser must redirect user to codebattle lobby(https://codebattle.hexlet.io/#lobby)
+
+- summary: |
+    4.4 sign in with incorrect password
+  requirement: |
+    user must not be able to sign in with incorrect password
+  prerequisites:
+    sign in page is open
+  test-data: |
+    sign in page = https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    email = wwwser011@gmail.com
+    password = PoBarock8912!
+  steps:
+    - enter email
+    - enter password
+    - press "submit" buttom
+  expected-result: |
+    web page must show "INVALID_PASSWORD" error
+    user won't log in
+
+- summary: |
+    4.5 sign In with incorrect email
+  requirement: |
+    user must not be able to sign in with incorrect email
+  prerequisites:
+    sign in page is open
+  test-data: |
+    sign in page = https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    email = wwwsir011@gmail.com
+    password = Podarock8912!
+  steps:
+    - enter email
+    - enter password
+    - press "submit" buttom
+  expected-result: |
+    web page must show "EMAIL_NOT_FOUND" error
+    user won't log in
+
+- summary: |
+    5. change user name
+  requirement: |
+    user must be able to change user name
+  prerequisites:
+    signed in codebattle
+    move to user settings from the lobby
+  test-data: |
+    sign in page = https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    lobby page = https://codebattle.hexlet.io/#lobby
+    sittings page = https://codebattle.hexlet.io/settings
+    email = wwwser011@gmail.com
+    password = Podarock8912!
+    new user name = VALERIQ
+  steps:
+    - change name to new user name
+    - press "save" buttom
+  expected-result: |
+    web page must show "Your settings has been changed"
+
+- summary: |
+    6. connect Github after registration
+  requirement: |
+    user must be able to connect Github after registration
+  prerequisites:
+    signed in codebattle
+    move to user settings from the lobby
+    github account is exist and user must be signed in
+  test-data: |
+    sign in page = https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    lobby page = https://codebattle.hexlet.io/#lobby
+    sittings page = https://codebattle.hexlet.io/settings
+    email = wwwser011@gmail.com
+    password = Podarock8912!
+    github = login = ***** password = **********
+  steps:
+    - press "link Github" buttom
+    - web site must redirect user to Github log in page
+    - enter github login and password
+    - press "sign in" buttom
+  expected-result: |
+    web page must show "Your settings has been changed"
+
+
+- summary: |
+    7. connect Discord after registration
+  requirement: |
+    user must be able to connect Discord after registration
+  prerequisites:
+    signed in codebattle
+    move to user settings from the lobby
+    Discord account is exist and user must be signed in
+  test-data: |
+    sign in page = https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    lobby page = https://codebattle.hexlet.io/#lobby
+    sittings page = https://codebattle.hexlet.io/settings
+    email = wwwser011@gmail.com
+    password = Podarock8912!
+    Discord = login = ***** password = **********
+  steps:
+    - press "link Discord" buttom
+    - web site must redirect user to Discord log in page
+    - enter Discord login and password
+    - press "sign in" buttom
+  expected-result: |
+    web page must show "Your settings has been changed"
