@@ -103,6 +103,5 @@ non-functional:
   - website must be secure and protect user's data
   - website must be designed with ease of use in mind and
   optimized for speed
-  -
 implict:
-  -
+  - website must be
