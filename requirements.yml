@@ -101,7 +101,6 @@ non-functional:
   - website must be able to handle heavy traffic (up to 1.000 users at ones)
   - website must be convenient on moble devises
   - website must be secure and protect user's data
-  - website must be designed with ease of use in mind and
-  optimized for speed
+  - website must be designed with ease of use in mind and optimized for speed
 implict:
   - website must be
